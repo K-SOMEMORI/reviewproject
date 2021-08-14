@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <form class="form-signin" method='post'>{% csrf_token %}
+    <h1 class="h3 mb-3 fw-normal">Please login</h1>
+    <label for="inputEmail" class='sr-only'>Username</label>
+    <input type="text" class="form-control" id="inputEmail" placeholder="username" name="username_data" required autofocus>
+    <label for="inputPassword" class='sr-only'>Password</label>
+    <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password_data" required>  
+    <div class="checkbox mb-3">
+    </div>
+    <a href="{% url 'list' %}" class="w-100 btn btn-primary" type="submit">login</a>
+    <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+    </form>
+</div>
+{% endblock content %}
